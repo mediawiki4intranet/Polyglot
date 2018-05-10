@@ -99,7 +99,7 @@ function wfPolyglotExtension() {
  * @param $article
  * @return bool
  */
-function wfPolyglotInitializeArticleMaybeRedirect( &$title, &$request, &$ignoreRedirect, &$target, &$article ) {
+function wfPolyglotInitializeArticleMaybeRedirect( $title, $request, $ignoreRedirect, &$target, &$article ) {
 	global $wfPolyglotExemptNamespaces, $wfPolyglotExcemptTalkPages, $wfPolyglotFollowRedirects;
 	global $wgLang, $wgContLang;
 
@@ -244,7 +244,7 @@ function wfPolyglotGetLanguages( $title ) {
  * @param $text
  * @return bool
  */
-function wfPolyglotParserAfterTidy( &$parser, &$text ) {
+function wfPolyglotParserAfterTidy( $parser, &$text ) {
 	global $wgPolyglotLanguages, $wfPolyglotExemptNamespaces, $wfPolyglotExcemptTalkPages;
 	global $wgContLang;
 
